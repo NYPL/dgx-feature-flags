@@ -1,5 +1,5 @@
 import alt from 'dgx-alt-center';
-import { immutable as ImmutableStore } from 'alt/utils/ImmutableUtil';
+import immutable from 'alt/utils/ImmutableUtil';
 import Immutable from 'immutable';
 
 import FeatureFlagsActions from '../actions/FeatureFlagsActions.js';
@@ -48,4 +48,4 @@ class FeatureFlagsStore {
   }
 }
 
-export default alt.createStore(ImmutableStore(FeatureFlagsStore));
+export default alt.createStore(immutable(FeatureFlagsStore));
