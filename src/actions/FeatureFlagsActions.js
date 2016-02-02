@@ -2,12 +2,12 @@ import alt from 'dgx-alt-center';
 
 class FeatureFlagsActions {
 
-  activateExperiment(experimentName) {
-    this.dispatch(experimentName);
+  activateFlag(flag) {
+    this.dispatch(flag);
   }
 
-  deactivateExperiment(experimentName) {
-    this.dispatch(experimentName);
+  deactivateFlag(flag) {
+    this.dispatch(flag);
   }
 }
 
