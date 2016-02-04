@@ -6,15 +6,15 @@ import FeatureFlagsActions from '../actions/FeatureFlagsActions.js';
 
 class FeatureFlagsStore {
   constructor() {
-    const { activateFlag, deactivateFlag } = FeatureFlagsActions;
+    const { activateFeature, deactivateFeature } = FeatureFlagsActions;
 
     this.bindListeners({
-      setFlag: activateFlag,
-      removeFlag: deactivateFlag,
+      setFeature: activateFeature,
+      removeFeature: deactivateFeature,
     });
 
     this.exportPublicMethods({
-      _isFlagActive: this._isFlagActive,
+      _isFeatureActive: this._isFeatureActive,
       _getImmutableState: this._getImmutableState,
     });
 
@@ -24,8 +24,8 @@ class FeatureFlagsStore {
   /*
   * PUBLIC METHODS
   */
-  _isFlagActive(flag) {
-    return !!this.state.get(flag);
+  _isFeatureActive(feature) {
+    return !!this.state.get(feature);
   }
 
   _getImmutableState() {
@@ -35,15 +35,15 @@ class FeatureFlagsStore {
   /*
   * PRIVATE METHODS
   */
-  setFlag(flag) {
+  setFeature(feature) {
     this.setState(
-      this.state.set(flag, true)
+      this.state.set(feature, true)
     );
   }
 
-  removeFlag(flag) {
+  removeFeature(feature) {
     this.setState(
-      this.state.delete(flag)
+      this.state.delete(feature)
     );
   }
 }
