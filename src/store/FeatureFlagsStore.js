@@ -1,5 +1,5 @@
 import alt from 'dgx-alt-center';
-import immutable from 'alt/utils/ImmutableUtil';
+import immutable from 'alt-utils/lib/ImmutableUtil';
 import Immutable from 'immutable';
 
 import FeatureFlagsActions from '../actions/FeatureFlagsActions.js';
