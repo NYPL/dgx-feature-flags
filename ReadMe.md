@@ -23,19 +23,23 @@ Add to your package.json
 	// Using the Store:
 	FeatureFlags.store //Allows the following methods
 
-	...store.getState(); //Returns Immutable State
+	...store.getState(); OR ...store._getImmutableState(); //Returns Immutable State
 
-	...store._isExperimentActive(string) //Returns a boolean for specified experiment
+	...store._isFeatureActive(string) //Returns a boolean for specified feature flag
 
 	// Using Actions
-	FeatureFlags.actions //Allows you to dispatch specific events to activate/deactivate flags
+	FeatureFlags.actions //Allows you to dispatch specific events to activate/deactivate features
 
-	...actions.activateExperiment(string)
+	...actions.activateFeature(string);
 
-	...actions.deactivateExperiment(string)
+	...actions.deactivateFeature(string);
 
 	// Using Utils
 	FeatureFlags.utils //Public utility methods to set or remove featured flags
+
+	...utils.activateFeature(string);
+
+	...utils.deactivateFeature(string);
 ```
 
 
