@@ -1,10 +1,10 @@
 import FeatureFlagsActions from '../actions/FeatureFlagsActions.js';
 
 export default {
-	activateExperiment(experiment) {
-		return FeatureFlagsActions.activateExperiment(experiment);
+	activateFeature(feature) {
+		return FeatureFlagsActions.activateFeature(feature);
 	},
-	deactivateExperiment(experiment) {
-		return FeatureFlagsActions.deactivateExperiment(experiment);
-	}
-}
+	deactivateFeature(feature) {
+		return FeatureFlagsActions.deactivateFeature(feature);
+	},
+};
