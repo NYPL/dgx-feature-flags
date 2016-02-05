@@ -21,7 +21,7 @@
     "url": "https://bitbucket.org/NYPL/dgx-feature-flags/issues"
   },
   "dependencies": {
-    "alt": "^0.17.9",
+    "alt-utils": "^1.0.0",
     "dgx-alt-center": "git+ssh://bitbucket.org/NYPL/dgx-alt-center.git#master",
     "immutable": "^3.7.6"
   },

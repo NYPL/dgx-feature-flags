@@ -1,21 +1,21 @@
 import alt from 'dgx-alt-center';
-import ImmutableStore from 'alt/utils/ImmutableUtil';
+import immutable from 'alt-utils/lib/ImmutableUtil';
 import Immutable from 'immutable';
 
 import FeatureFlagsActions from '../actions/FeatureFlagsActions.js';
 
 class FeatureFlagsStore {
   constructor() {
-    const { activateExperiment, deactivateExperiment } = FeatureFlagsActions;
+    const { activateFeature, deactivateFeature } = FeatureFlagsActions;
 
     this.bindListeners({
-      setExperiment: activateExperiment,
-      removeExperiment: deactivateExperiment,
+      setFeature: activateFeature,
+      removeFeature: deactivateFeature,
     });
 
     this.exportPublicMethods({
-      _isExperimentActive: this._isExperimentActive,
-      _getImmuteState: this._getImmuteState,
+      _isFeatureActive: this._isFeatureActive,
+      _getImmutableState: this._getImmutableState,
     });
 
     this.state = Immutable.Map();
@@ -24,28 +24,28 @@ class FeatureFlagsStore {
   /*
   * PUBLIC METHODS
   */
-  _isExperimentActive(experiment) {
-    return !!this.state.get(experiment);
+  _isFeatureActive(feature) {
+    return !!this.state.get(feature);
   }
 
-  _getImmuteState() {
+  _getImmutableState() {
     return Immutable.fromJS(this.getState());
   }
 
   /*
   * PRIVATE METHODS
   */
-  setExperiment(experiment) {
+  setFeature(feature) {
     this.setState(
-      this.state.set(experiment, true)
+      this.state.set(feature, true)
     );
   }
 
-  removeExperiment(experiment) {
+  removeFeature(feature) {
     this.setState(
-      this.state.delete(experiment)
+      this.state.delete(feature)
     );
   }
 }
 
-export default alt.createStore(ImmutableStore(FeatureFlagsStore));
+export default alt.createStore(immutable(FeatureFlagsStore));
