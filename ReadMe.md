@@ -57,7 +57,7 @@ Below is a possible way to execute feature flags by the dev tool of the browser.
 "dgx-feature-flags": "git+https://git@bitbucket.org/NYPL/dgx-feature-flags.git#master"
 ```
 
-2. In the entry js file of the application we like to have feature flags, import the feature flags module we just installed.
+2. In the entry js file of the application, import the feature flags module we recently installed.
 
 One possible way in ES6 style could be,
 
