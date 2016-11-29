@@ -44,7 +44,7 @@ Add to your package.json
 
 ### Using Feature Flags on NYPL Node Applications
 
-Feature flags help us moderate user studies for the coming new updates and keep the stable version of the header at the same time. By enabling specific feature flags, the user may interact with the new fucntions and interfaces, while by disabling it, the user goes back to use the exsisting released version.
+dgx-feature-flags helps us moderate user studies for the coming new updates and have the stable version at the same time. By enabling specific feature flags, the user may interact with the new fucntions and interfaces, while by disabling it, the user goes back to use the exsisting released version.
 
 The applications that want to use feature flags need to install the feature flag module first. And then depending on the way we want to toggle feature flags, some functions need to be added in the entry js file.
 
