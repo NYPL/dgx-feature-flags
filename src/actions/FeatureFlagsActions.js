@@ -3,11 +3,11 @@ import alt from 'dgx-alt-center';
 class FeatureFlagsActions {
 
   activateFeature(feature) {
-    this.dispatch(feature);
+    return feature;
   }
 
   deactivateFeature(feature) {
-    this.dispatch(feature);
+    return feature;
   }
 }
 
