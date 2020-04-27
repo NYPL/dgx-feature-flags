@@ -50,7 +50,7 @@ The applications that want to use feature flags need to install the feature flag
 
 Below is a possible way to execute feature flags by the dev tool of the browser.
 
-1. To install fature flags, have this line in the package.json and execute npm install.
+1. To install feature flags, have this line in the package.json and execute npm install.
 
 ```
 #!javascript
