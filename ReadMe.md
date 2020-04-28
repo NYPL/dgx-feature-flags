@@ -12,7 +12,6 @@ Add to your package.json
 	"dgx-feature-flags": "git+ssh://bitbucket.org/NYPL/dgx-feature-flags.git#master"
 ```
 
-
 ## Usage
 
 ```
@@ -90,6 +89,14 @@ dgxFeatureFlags.deactivateFeature([Your feature flag's name here. It should be a
 
 to disable the feature flag.
 
+### Contributing to this repo
+* Create a feature branch from `development`
+* From the command line rebuild the `/dist` directory with `npm run build`.
+* Add & commit the new `/dist` folder and make the pull request
+  with `development` as the base.
+* Changes must be approved by a peer reviewer
+* Merge changes upon approval
+* Merge `development` into `master`
 
 ## Credits
 
