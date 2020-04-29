@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/NYPL/dgx-feature-flags.git"
+    "url": "https://github.com/NYPL/dgx-feature-flags.git"
   },
   "keywords": [
     "webpack",
@@ -18,7 +18,7 @@
     "ab testing"
   ],
   "bugs": {
-    "url": "https://bitbucket.org/NYPL/dgx-feature-flags/issues"
+    "url": "https://github.com/NYPL/dgx-feature-flags/issues"
   },
   "dependencies": {
     "alt-utils": "2.0.0",
