@@ -18,7 +18,8 @@ module.exports = {
     // export itself to a UMD require library convention
     libraryTarget: "umd",
     // name of the global var
-    library: "dgxFeatureFlags"
+    library: "dgxFeatureFlags",
+    globalObject: "this",
   },
   module: {
     rules: [
