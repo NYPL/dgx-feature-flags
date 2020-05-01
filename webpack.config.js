@@ -19,7 +19,7 @@ module.exports = {
     libraryTarget: "umd",
     // name of the global var
     library: "dgxFeatureFlags",
-    globalObject: "this",
+    globalObject: "window",
   },
   module: {
     rules: [
