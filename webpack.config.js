@@ -16,10 +16,10 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'index.min.js',
     // export itself to a UMD require library convention
-    libraryTarget: "umd",
+    libraryTarget: 'umd',
     // name of the global var
-    library: "dgxFeatureFlags",
-    globalObject: "window",
+    library: 'dgxFeatureFlags',
+    globalObject: 'this',
   },
   module: {
     rules: [
