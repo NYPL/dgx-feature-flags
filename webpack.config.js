@@ -1,34 +1,36 @@
-var path = require('path');
-var webpack = require('webpack');
-var cleanBuild = require('clean-webpack-plugin');
-var rootPath = path.resolve(__dirname);
+const path = require('path');
+const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const rootPath = path.resolve(__dirname);
 
 module.exports = {
-  context: rootPath + '/src',
   entry: {
-    'dgx-feature-flags': ['./index.js'],
+    'dgx-feature-flags': [
+      path.resolve(rootPath, 'src/index.js')
+    ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx']
   },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.min.js',
     // export itself to a UMD require library convention
-    libraryTarget: "umd",
+    libraryTarget: 'umd',
     // name of the global var
-    library: "dgxFeatureFlags"
+    library: 'dgxFeatureFlags',
+    globalObject: 'this',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js?$/,
         exclude: /(node_modules|bower_components)/,
-        loaders: ['babel']
+        loaders: ['babel-loader']
       }
     ]
   },
   plugins: [
-    new cleanBuild(['dist'])
+    new CleanWebpackPlugin()
   ]
 };
