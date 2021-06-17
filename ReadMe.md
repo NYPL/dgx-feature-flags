@@ -9,7 +9,7 @@ Add to your package.json
 
 ```
 #!javascript
-	"dgx-feature-flags": "git+ssh://bitbucket.org/NYPL/dgx-feature-flags.git#master"
+	"dgx-feature-flags": "git+ssh://github.com/NYPL/dgx-feature-flags.git#master"
 ```
 
 
@@ -54,7 +54,7 @@ Below is a possible way to execute feature flags by the dev tool of the browser.
 
 ```
 #!javascript
-"dgx-feature-flags": "git+https://git@bitbucket.org/NYPL/dgx-feature-flags.git#master"
+"dgx-feature-flags": "git+https://git@github.com/NYPL/dgx-feature-flags.git#master"
 ```
 
 2. In the entry js file of the application, import the feature flags module we recently installed.
